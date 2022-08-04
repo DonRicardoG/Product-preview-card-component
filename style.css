@@ -1,0 +1,143 @@
+:root{
+    --mainFont: 'Montserrat', sans-serif;
+    --secondaryFont:'Fraunces', serif;
+
+    --green: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --darkBlue: hsl(212, 21%, 14%);
+    --darkGreyBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --darkGreen: hsl(157, 36%, 25%);
+
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    font-family: var(--mainFont);
+    font-size: 1.4rem;
+    line-height: 2;
+    background-color: var(--cream);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    max-width: 60rem;
+    margin: 16rem auto;
+    /* max-height: 70rem; */
+    border: 1px;
+    border-radius: 1rem;
+    justify-items: center;
+    background-color: var(--white);
+}
+
+@media (max-width: 375px){
+   .container{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        
+   }
+
+   .text h1{
+        margin-right: 2rem;
+   }
+}
+
+.photo{
+    display: grid;
+    justify-content: center;
+}
+
+.photo{
+    background-image: url(/images/image-product-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25rem;
+}
+
+.text h3{
+    text-transform: uppercase;
+    color: var(--darkGreyBlue);
+    font-family: var(--mainFont);
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 3.5px;
+    margin: 2rem 0 0;
+}
+
+.text h1{
+    font-family: var(--secondaryFont);
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-right: 4rem;
+}
+
+.parragraph{
+    font-family: var(--mainFont);
+    margin: 0 2rem 0 0;
+}
+
+.prices{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 22rem;
+}
+
+.big-price{
+    font-family: var(--secondaryFont);
+    font-size: 3.2rem;
+    color: var(--green);
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.small-price{
+    font-family: var(--mainFont);
+    color: var(--darkGreyBlue);
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+button{
+    background-color: var(--green); /* Green */
+    border: none;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+    margin: 2rem auto;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--darkGreen);
+}
